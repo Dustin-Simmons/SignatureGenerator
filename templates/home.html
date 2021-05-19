@@ -1,0 +1,122 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="titleBox">
+        <img id='titleImage' src="/static/SecondaryLogo.png">
+    </div>
+    <div class="container">
+        <div class="title">Email Signature Generator</div>
+        <div class="row" style="height: 3.5vh;">
+            <button class="button" type="button" id="corporateButton" onclick="showCorpForm()"><span>Corporate</span></button>
+            <button class="button" type="button" id="retailButton" onclick="showRetailForm()" style='background-color: #45ad4e'><span>Retail</span></button>
+        </div>
+
+        <!-- Corporate Form -->
+        <form action="{{ url_for('instructions') }}" method=post id="corporateForm" style="display:none !important">
+              <div class="row">
+                  <div class="col-25">
+                      <label for="name">First and Last Name</label>
+                  </div>
+                  <div class="col-75">
+                      <input type="text" id="name" name="name" required placeholder="First and Last..">
+                  </div>
+              </div>
+              <div class="row">
+              <div class="col-25">
+                <label for="title" id="titleLabel">Title</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="title" name="title" required placeholder="Your title..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="phone">Office Phone (Include the hyphens)</label>
+              </div>
+              <div class="col-75">
+                <input type="tel" id="phone" name="phone" title='Must include hyphens' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                       required placeholder="### - ### - ####">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                  <label for="cell">Mobile Phone (Optional)</label>
+              </div>
+              <div class="col-75">
+                <input type="tel" id="cell" name="cell" title='Must include hyphens' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                       placeholder="### - ### - ####">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="email">Email Address</label>
+              </div>
+              <div class="col-75">
+                <input type="email" id="email" name="email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_{|}~-]+@simplymac\.com$"
+                       required placeholder="Your email address..">
+              </div>
+            </div>
+            <div class="row">
+                <button class="button" id="corpSubmitButton" style="margin-bottom: 20px;">
+                    <span>Generate</span>
+                </button>
+            </div>
+          </form>
+        <!-- End Corporate Form -->
+
+        <!-- Retail Form -->
+        <form action="{{ url_for('instructions2') }}" method=post id="retailForm" style="display:block !important;">
+              <div class="row">
+                  <div class="col-25">
+                      <label for="name">First and Last Name</label>
+                  </div>
+                  <div class="col-75">
+                      <input type="text" id="name" name="name" required placeholder="First and Last..">
+                  </div>
+              </div>
+              <div class="row">
+              <div class="col-25">
+                <label for="title">Title</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="title" name="title" required placeholder="Your title..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="phone">Store Phone (Include the hyphens)</label>
+              </div>
+              <div class="col-75">
+                <input type="tel" id="phone" name="phone" title='Must include hyphens' required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                       placeholder="### - ### - ####">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="email">Email Address</label>
+              </div>
+              <div class="col-75">
+                <input type="email" id="email" name="email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_{|}~-]+@simplymac\.com$"
+                       required placeholder="Your email address..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="storeDropDown">Store Location</label>
+              </div>
+              <div class="col-75">
+                <div class="dropDownWrapper">
+                    <select name="storeDropDown" id="storeDropDown" style="float: left; margin-left: 4vw; margin-top: 10px;">
+                      {% for i, j in store_dict %}
+                          <option value="{{ i }}">{{ i }}</option>
+                      {% endfor %}
+                    </select>
+                </div>
+                <button class="button" id="retailSubmitButton">
+                    <span>Generate</span>
+                </button>
+              </div>
+            </div>
+          </form>
+        <!-- End Retail Form -->
+    </div>
+{% endblock %}

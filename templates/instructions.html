@@ -1,0 +1,108 @@
+{% extends 'layout.html' %}
+{% block content %}
+    {#<div class="secondTitleBox">
+        <img id='titleImage' src="/static/SecondaryLogo.png">
+    </div>#}
+    <div class="stepsContainer">
+        <div class="title" id="instructionsTitle"> Email Signature Generator</div>
+        <div class="sigBox">
+            <div class="row" id="sigRow" style="background: transparent;">
+            <!-- Start of sig -->
+            <table id="signature" style="max-width: 470px; padding-bottom: 0px; margin-bottom: 1px; background: transparent;" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr style="height: 108px;">
+                        <td style="height: 108px;">
+                            <table style="width: 470px;" border="0" cellspacing="0" cellpadding="0" width="470">
+                                <tbody>
+                                    <tr style="height: 98px;" valign="center">
+                                        <td>
+                                            <img style="border-radius: 0px; width: 65px; height: 65px; max-width: 120px;" src="https://s3.amazonaws.com/simplymac.com/SimplyMac_Circle_65x65.png" alt="photo" width="65" height="65" />
+                                        </td>
+                                        <td style="border-right: 1px solid #20a0db; padding-left: 5px;height: 98px;">
+
+                                        </td>
+                                        <td style="text-align: initial; font: 12px Arial; color: #646464; padding: 0px 10px; height: 98px;">
+                                            <div style="margin-bottom: 5px; margin-top: 0 !important;">
+                                                <strong class="text-color theme-font">
+                                                    {{ name }}
+                                                </strong>
+                                                <br />
+                                                <span>
+                                                     {{ title }}
+                                                </span>
+                                                 -
+                                                <span>
+                                                    Simply Mac
+                                                </span>
+                                            </div>
+                                            <table style="width: 470px; margin-top: 5px;" border="0" cellspacing="0" cellpadding="0" width="470">
+                                                <tbody>
+                                                    <tr style="height: 16px;">
+                                                        <td style="color: #8d8d8d; font: 12px Arial; height: 16px;">
+                                                            <p id="optPhone" style="margin: 0;" >
+                                                                {% if cell_len == 12 %}
+                                                                    o: {{ phone }} | c: {{ cell }}
+                                                                {% else %}
+                                                                    o: {{ phone }}
+                                                                {% endif %}
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="height: 16px;">
+                                                        <td style="color: #8d8d8d; font: 12px Arial; height: 16px;">
+                                                            <p style="margin: 0;">
+                                                                <span style="white-space: nowrap; display: inline-block;">
+                                                                    <a style="color: #8d8d8d; text-decoration: none; font-family: sans-serif;" rel="noopener" href="mailto:{{ email }}" target="_blank">
+                                                                         {{ email }}
+                                                                    </a>
+                                                                </span>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- End of sig -->
+            </div>
+        </div>
+        <div class="stepsBox">
+            <h3><u>Gmail Instructions</u></h3>
+            <ul>
+                <li>Open Gmail</li>
+                <li>In the top right, click the <i>'Settings'</i> drop-down button. Click <i>'See all settings'</i>.</li>
+                <li>In the <i>'General'</i> tab, scroll down until you see the <i>'Signature'</i> section.</li>
+                <li>Click the <i>'+ Create New'</i> button. Enter the name for your signature.</li>
+                <li>In the Signature Generator, ensure you have highlighted the entirety of your newly created signature.
+                    Then, copy/paste it into the Signature text box in Gmail.</li>
+                <li>At the bottom of the page, click <i>'Save Changes'</i>.</li>
+            </ul>
+            <hr>
+            <h3><u>Apple Mail Instructions</u></h3>
+            <ul>
+                <li>Unfortunately Apple Mail does not always format the signature properly if it is copy/pasted from
+                    Safari. If these steps do not work, <b style="color: red">you will have to open the Signature Generator in Google Chrome.</b></li>
+                <li>Open the Mail App</li>
+                <li>Select the <i>'Mail'</i> dropdown in the top left. Then select <i>'Preferences'</i>.</li>
+                <li>In the popup window, select the <i>'Signatures'</i> tab. Click the <i>'+'</i>.</li>
+                <li><b style="color: red">DESELECT</b> the <i>'Always match my default message font'</i> box.</li>
+                <li>In the Signature Generator, ensure you have highlighted the entirety of your newly created signature.</li>
+                <li>Copy & Paste your signature into the text box. </li>
+                <li>The Simply Mac logo will appear as a blank box so compose a new email to confirm signature is correct.</li>
+            </ul>
+        </div>
+        <form action="{{ url_for('home') }}" method="get">
+            <div class="resubmitButton">
+                <button type="submit" class="button" id="corpResubmitButton">
+                    <span>Generate Another<br>Signature</span>
+                </button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

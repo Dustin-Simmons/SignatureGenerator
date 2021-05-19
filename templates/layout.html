@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Signature Generator</title>
+        <link rel="stylesheet" href="/static/style.css">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <script type='text/javascript' src="{{ url_for('static', filename='jQuery.js') }}"></script>
+    </head>
+    <body>
+        <div class="mainContainer">
+            {% block content %} {% endblock %}
+        </div>
+    </body>
+</html>

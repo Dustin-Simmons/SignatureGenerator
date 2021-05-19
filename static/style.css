@@ -1,0 +1,211 @@
+@font-face {
+    font-family: glacialReg;  
+    src: url(GlacialIndifference-Regular.otf);
+}
+
+html {
+    overflow: scroll;
+}
+
+body {
+    background-image: linear-gradient(to bottom, #1da1dc, #3cade3, #53baea, #68c6f2, #7bd3f9);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: auto;
+}
+
+.titleBox {
+    position: absolute;
+    top: 8vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.secondTitleBox {
+    position: absolute;
+    top: 8vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#titleImage {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 70vh;
+    width: 50vw;
+    background-color: lightslategrey;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    font-size: 115%;
+}
+
+.stepsContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75vw;
+    background-color: lightslategrey;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    font-size: 115%;
+    max-height: 95%;
+    overflow: auto;
+}
+
+.title {
+    text-align: center;
+    font-family: glacialReg, serif;
+    text-decoration: underline;
+    color: white;
+    padding-top: 5px;
+    width: 50vw;
+    height: 7vh;
+    font-size:4.5vh;
+}
+
+#instructionsTitle {
+    padding-top: 2px;
+    width: 100%;
+}
+
+.row {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    height: 7vh;
+}
+
+label {
+    text-align: left;
+    margin-left: 4.3vw;
+    font-family: glacialReg, serif;
+    font-weight: bold;
+    display: block;
+    font-size: 1.75vh;
+}
+
+input {
+    text-align: left;
+    padding: 10px;
+    margin: 1vh;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border-style: none;
+    width: 42vw;
+}
+
+.button {
+    border-radius: 8px;
+    background-color: white;
+    border: none;
+    padding: 10px;
+    width: 15vw;
+    transition: all 0.5s;
+    font-size: 1.75vh;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.button:active {
+    background-color: #45ad4e;
+}
+
+#storeDropDown {
+    width: 8vw;
+    font-family: glacialReg, serif;
+    background: white;
+	border: 1px solid #F0F3FB;
+	border-radius: 8px;
+	padding: 5px;
+	font-size: 1.5vh;
+	color: #3F3F3F;
+}
+
+#retailSubmitButton {
+    float: right;
+    margin-right: 7.5%;
+    margin-bottom: 20px;
+}
+
+.sigBox {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 1.5vw;
+    height: 125px;
+}
+
+.sigBox2 {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 1.5vw;
+    margin-left: 1.5vw;
+    height: 155px;
+}
+
+.stepsBox {
+    text-align: center;
+    font-family: glacialReg, serif;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 1vh;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+    margin-bottom: 1vh;
+    font-size: 1.75vh;
+    padding: 5px;
+}
+
+ul {
+    text-align: left;
+}
+
+#corporateForm {
+    display: none;
+}
+
+#retailForm {
+    display: none;
+}
+
+.resubmitButton {
+    text-align: center;
+}
+
+#signature {
+    background: transparent;
+}

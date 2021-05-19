@@ -1,0 +1,77 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <script>
+        $(document).ready(function() {
+          $("#formButton").click(function() {
+            $("#form1").toggle();
+          });
+        });
+    </script>
+    <div class="titleBox">
+        <img id='titleImage' src="/static/whiteTitleLogo.png">
+    </div>
+    <div class="container">
+      <button type="button" id="corporate">Corporate</button>
+      <button type="button" id="retail">Retail</button>
+        <div class="title"><h1>Signature Generator</h1></div>
+      <form action="{{ url_for('instructions') }}" method=post>
+          <!-- hidden field that has csrf token -->
+          <input type="hidden" name="key" value="{{ key }}"/>
+          <div class="row">
+              <div class="col-25">
+                  <label for="name">First and Last Name</label>
+              </div>
+              <div class="col-75">
+                  <input type="text" id="name" name="name" placeholder="First and Last..">
+              </div>
+          </div>
+          <div class="row">
+          <div class="col-25">
+            <label for="title">Title</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="title" name="title" placeholder="Your title..">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="phone">Office Phone (Include the hyphens)</label>
+          </div>
+          <div class="col-75">
+            <input type="tel" id="phone" name="phone" title='Must include hyphens' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                   placeholder="###-###-####">
+          </div>
+        </div>
+        <!-- Hidden phone number field -->
+        <div class="row">
+          <div class="col-25">
+              <label for="phone">Cellphone</label>
+          </div>
+          <div class="col-75">
+              <ul style="list-style:none">
+                  <li>
+                      <input type="checkbox">
+                      <input type="tel" id="altPhone" name="altPhone" title='Must include hyphens' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                             placeholder="###-###-####">
+                  </li>
+              </ul>
+          </div>
+        </div>
+        <!-- End of hidden phone number field -->
+        <div class="row">
+          <div class="col-25">
+            <label for="email">Email Address</label>
+          </div>
+          <div class="col-75">
+            <input type="email" id="email" name="email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_{|}~-]+@simplymac\.com$"
+                   required placeholder="Your email address..">
+          </div>
+        </div>
+        <div class="row">
+            <button class="button">
+                <span>Generate</span>
+            </button>
+        </div>
+      </form>
+    </div>
+{% endblock %}
