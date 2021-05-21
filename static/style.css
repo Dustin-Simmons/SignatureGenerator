@@ -3,17 +3,12 @@
     src: url(GlacialIndifference-Regular.otf);
 }
 
-html {
-    overflow: scroll;
-}
-
 body {
     background-image: linear-gradient(to bottom, #1da1dc, #3cade3, #53baea, #68c6f2, #7bd3f9);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     margin: auto;
-    overflow: auto;
 }
 
 .titleBox {
