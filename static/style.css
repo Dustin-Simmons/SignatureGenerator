@@ -13,6 +13,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     margin: auto;
+    overflow: auto;
 }
 
 .titleBox {
