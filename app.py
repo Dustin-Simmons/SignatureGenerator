@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, url_for, redirect
 from secure import Secure
-import zappa
 
 # Create app, set csrf key, and activate security.py
 app = Flask(__name__)
@@ -18,7 +17,7 @@ store_dict = {
     '205 Rogers': '2603 W Pleasant Grove Rd, Suite 103/Rogers, AR 72758',
     '206 Katy': '23730 Westheimer Parkway, Space 730-T/Katy, TX 77494',
     '207 Waco': '300 S. 2nd Street, Suite 104/Waco, TX 76701',
-    '208 San Marcos': '200 Springtown Way, Suite 122/San Marcos, TX 78666',
+    #'208 San Marcos': '200 Springtown Way, Suite 122/San Marcos, TX 78666',
     '301 Evansville': '6401 E Lloyd Expressway, Suite 17/Evansville, IN 47715',
     '305 Ft. Wayne': '4130 W Jefferson Blvd, Suite I-7/Fort Wayne, IN 46804',
     '308 Cincinnati': '7532 Gibson St., Space E-108/Cincinnati, OH 45069',
@@ -37,9 +36,12 @@ store_dict = {
     '420 Eugene': '881 E 13th Ave/Eugene, OR 97401',
     '421 Hillsboro': '2165 NE Allie Ave Space 550/Hillsboro, OR 97124',
     '510 Springfield': '2714 South Glenstone Ave/Springfield, MO 65804',
-    '514 Columbia': '2703 E Broadway, Suite 220/Columbia, MO 65201',
+    #'511 Lawrence': '3221 Iowa Street/Lawrence, KS 66046',
+    '514 Columbia MO': '2703 E Broadway, Suite 220/Columbia, MO 65201',
+    #'602 Columbia SC': '4840 Forest Drive, Suite 6-B/Columbia, SC 29206',
+    #'603 Wilmington': '6835 Conservation Way, Space J115/Wilmington, NC 28405',
     #'604 Myrtle Beach': '130 SayeBrook Parkway, Unit 1/Myrtle Beach, SC 29588',
-    #'605 Winston Salem': '276 S Stratford Rd/Winston Salem, NC 27103',
+    '605 Winston Salem': '276 S Stratford Rd/Winston Salem, NC 27103',
     '702 Athens': '1850 Epps Bridge Pkwy Suite 207/Athens, GA 30606',
     '704 Charlottesville': '1111 Emmet Street North/Charlottesville, VA 22903',
     '705 Macon': '5005 Riverside Drive, Suite B/Macon, GA 31210',
