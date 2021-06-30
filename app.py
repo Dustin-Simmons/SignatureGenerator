@@ -27,7 +27,7 @@ store_dict = {
     '315 Johnson City': '2011 North Roan Street/Johnson City, TN 37601',
     '316 Louisville': '3702 Lexington Rd/Louisville, KY 40207',
     '317 Asheville': '8 Town Square Blvd #130/Asheville, NC 28803',
-    '401 Idaho Falls': '2980 South 25th East/Idaho Falls, ID 83404',
+    '401 Idaho Falls': '2694 E Sunnyside Rd/Ammon, ID 83406',
     '404 Missoula': '2901 Brooks Street D-2/Missoula, MT 59801',
     '406 Bozeman': '2825 W. Main St. Unit #5-6B/Bozeman, MT 59718',
     '410 Bend': '330 SW Powerhouse Dr. Suite #120/Bend, OR 97702',
