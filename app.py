@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, url_for, redirect
 from secure import Secure
 
+# 'gunicorn -b 0.0.0.0:8000 app:app' in terminal to run
+
 # Create app, set csrf key, and activate security.py
 app = Flask(__name__)
 secure = Secure()
@@ -105,4 +107,4 @@ def instructions2():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=80)
