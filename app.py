@@ -38,6 +38,7 @@ store_dict = {
     '421 Hillsboro': '2165 NE Allie Ave Space 550/Hillsboro, OR 97124',
     '510 Springfield': '2714 South Glenstone Ave/Springfield, MO 65804',
     '511 Lawrence': '3221 Iowa Street/Lawrence, KS 66046',
+    '513 Wichita': '9738 E 21st Street North/Wichita, KS 67206',
     '514 Columbia MO': '2703 E Broadway, Suite 220/Columbia, MO 65201',
     '601 Mt. Pleasant': '675 Johnnie Dodds Blvd, Unit B/Mt Pleasant, SC 29464',
     '602 Columbia SC': '4840 Forest Drive, Suite 6-B/Columbia, SC 29206',
@@ -58,10 +59,14 @@ store_dict = {
     '715 Sawgrass': '12801 W Sunrise Blvd, Suite#243/Sunrise, FL 33323',
     '716 Dolphin': '11401 NW 12th Street, Suite# E-296/Miami, FL 33172',
     '717 Gainesville': '1122 Dawsonville Highway, Unit No. 8/Gainesville, GA 30501',
+    # '718 Columbus': '11611 Whittlesey Rd #450/Columbus, GA 31904',
     '801 Destin': '4344 Legendary Drive, Space: B-112/Destin, FL 32541',
     '802 Tallahassee': '699 W Gaines Street, Unit 102/Tallahassee, FL 32304',
     '803 Tuscaloosa': '1320 McFarland Blvd E, Space #260/Tuscaloosa, AL 35404',
-    '805 Orlando UCF': '12101 University Boulevard, Suite 237/Orlando, FL 32817'
+    '804 Jacksonville': '120 Durbin Pavilion Drive, Suite 101/St Johns, FL 32259',
+    '805 Orlando UCF': '12101 University Boulevard, Suite 237/Orlando, FL 32817',
+    # '806 Daytona': '1401 Cornerstone Blvd, Suite 1315-B/Daytona Beach, FL 32214',
+    '807 Clearwater': '1785 Main St, Suite 101/Dunedin, FL 34698'
 }
 # End store dictionary
 
