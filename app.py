@@ -59,7 +59,6 @@ store_dict = {
     '715 Sawgrass': '12801 W Sunrise Blvd, Suite#243/Sunrise, FL 33323',
     '716 Dolphin': '11401 NW 12th Street, Suite# E-296/Miami, FL 33172',
     '717 Gainesville': '1122 Dawsonville Highway, Unit No. 8/Gainesville, GA 30501',
-    # '718 Columbus': '11611 Whittlesey Rd #450/Columbus, GA 31904',
     '801 Destin': '4344 Legendary Drive, Space: B-112/Destin, FL 32541',
     '802 Tallahassee': '699 W Gaines Street, Unit 102/Tallahassee, FL 32304',
     '803 Tuscaloosa': '1320 McFarland Blvd E, Space #260/Tuscaloosa, AL 35404',
