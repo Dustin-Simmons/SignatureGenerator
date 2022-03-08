@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request, url_for, redirect
 from secure import Secure
 
-# 'gunicorn -b 0.0.0.0:8000 app:app' in terminal to run
+# To update live site, delete 'SignatureGenerator' directory, clone updated repository, reboot server, run following:
+# 'gunicorn -b 0.0.0.0:8000 SignatureGenerator.app:app' in terminal to run
 
 # Create app, set csrf key, and activate security.py
 app = Flask(__name__)
@@ -30,10 +31,10 @@ store_dict = {
     '316 Louisville': '3702 Lexington Rd/Louisville, KY 40207',
     '317 Asheville': '8 Town Square Blvd #130/Asheville, NC 28803',
     '401 Idaho Falls': '2694 E Sunnyside Rd/Ammon, ID 83406',
-    '404 Missoula': '2901 Brooks Street D-2/Missoula, MT 59801',
-    '406 Bozeman': '2825 W. Main St. Unit #5-6B/Bozeman, MT 59718',
+    '404 Missoula': '3275 N Reserve St. Suite B/Missoula, MT 59808',
+    '406 Bozeman': '2825 W. Main St. Unit #1E-1/Bozeman, MT 59718',
     '410 Bend': '330 SW Powerhouse Dr. Suite #120/Bend, OR 97702',
-    '419 Corvallis': '140C NW 3rd St./Corvallis, OR 97330',
+    '419 Corvallis': '1327 NW 9th St. Suite #100/Corvallis, OR 97330',
     '420 Eugene': '881 E 13th Ave/Eugene, OR 97401',
     '421 Hillsboro': '2165 NE Allie Ave Space 550/Hillsboro, OR 97124',
     '510 Springfield': '2714 South Glenstone Ave/Springfield, MO 65804',
@@ -64,7 +65,6 @@ store_dict = {
     '803 Tuscaloosa': '1320 McFarland Blvd E, Space #260/Tuscaloosa, AL 35404',
     '804 Jacksonville': '120 Durbin Pavilion Drive, Suite 101/St Johns, FL 32259',
     '805 Orlando UCF': '12101 University Boulevard, Suite 237/Orlando, FL 32817',
-    # '806 Daytona': '1401 Cornerstone Blvd, Suite 1315-B/Daytona Beach, FL 32214',
     '807 Clearwater': '1785 Main St, Suite 101/Dunedin, FL 34698'
 }
 # End store dictionary
